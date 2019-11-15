@@ -60,6 +60,7 @@ td input {
 	font-size: 3em;
 /* 	color: #666; */
 	color: transparent;
+	text-shadow: 0 0 0 #2196f3;
 	background-color: #dcdcd9;
 	/* background-color: #ffffff; */
 	border-radius: 8px;
