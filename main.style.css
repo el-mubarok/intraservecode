@@ -58,7 +58,8 @@ td input {
 	border: none;
 	text-align: center;
 	font-size: 3em;
-	color: #666;
+/* 	color: #666; */
+	color: transparent;
 	background-color: #dcdcd9;
 	/* background-color: #ffffff; */
 	border-radius: 8px;
