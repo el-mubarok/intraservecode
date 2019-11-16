@@ -317,11 +317,11 @@
 					
 					//console.log(currVal + " " + valToCheck);
 					if(valToCheck === currVal){	
-						$('.active')
-							.addClass('done')
-							.removeClass('active');
+						// $('.active')
+						// 	.addClass('done')
+						// 	.removeClass('active');
 					
-						$('.clues-active').addClass('clue-done');
+						// $('.clues-active').addClass('clue-done');
 
 						solved.push(valToCheck);
 						solvedToggle = true;

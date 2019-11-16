@@ -9,7 +9,7 @@
 			 	{
 					clue: "Sebutan untuk orang barat atau turis",
 					answer: "bule",
-					position: 2,
+					position: 1,
 					orientation: "across",
 					startx: 1,
 					starty: 5
@@ -17,7 +17,7 @@
 				{
 					clue: "Jalan kecil yang biasanya hanya muat kendaraan roda dua",
 					answer: "gang",
-					position: 1,
+					position: 3,
 					orientation: "across",
 					startx: 3,
 					starty: 3
@@ -25,7 +25,7 @@
 				{
 					clue: "Baju perempuan bagain bawah (bawahan)",
 					answer: "rok",
-					position: 3,
+					position: 5,
 					orientation: "across",
 					startx: 6,
 					starty: 5
@@ -35,7 +35,7 @@
 				{
 					clue: "Tempat nongkrong yang menyajikan kopi dan makanan ringan",
 					answer: "kafe",
-					position: 5,
+					position: 2,
 					orientation: "down",
 					startx: 4,
 					starty: 2
@@ -46,6 +46,14 @@
 					position: 4,
 					orientation: "down",
 					startx: 6,
+					starty: 1
+				},
+				{
+					clue: "",
+					answer: "",
+					position: 7,
+					orientation: "down",
+					startx: 1,
 					starty: 1
 				}
 			] 

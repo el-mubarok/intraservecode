@@ -12,15 +12,19 @@ body {
 }
 
 ::-webkit-scrollbar {
-	width: 0px;  /* Remove scrollbar space */
-	background: transparent;  /* Optional: just make scrollbar invisible */
+	width: 0px;
+	/* Remove scrollbar space */
+	background: transparent;
+	/* Optional: just make scrollbar invisible */
 }
 
-.fixed-bg{
+.fixed-bg {
 	background-image: url('./img/Soal\ random\ 2\ –\ 1.png');
 	background-size: cover;
-	width: 100%; height: 100%;
-	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 	z-index: -1;
 	position: fixed;
 }
@@ -37,11 +41,11 @@ table tr {
 
 table td {
 	/* width: 5em;
-	height: 5em; */
+		height: 5em; */
 	width: 80px;
 	height: 40px;
-	/* border: 1px solid #cdcdcd; */
-	border: none;
+	border: 1px solid #cdcdcd;
+	/* border: none; */
 	padding: 4px;
 	margin: 0;
 	/* background-color: #fefefe; */
@@ -54,13 +58,13 @@ td input {
 	font-weight: bold;
 	width: 100%;
 	height: 100%;
-	padding: 0em;
+	padding: .1em 0em;
 	border: none;
 	text-align: center;
-	font-size: 3em;
-/* 	color: #666; */
+	font-size: 2.5em;
+	/* 	color: #666; */
 	color: transparent;
-	text-shadow: 0 0 0 #2196f3;
+	text-shadow: 0 0 0 #ffffff;
 	background-color: #dcdcd9;
 	/* background-color: #ffffff; */
 	border-radius: 8px;
@@ -76,8 +80,8 @@ td input:focus {
 }
 
 input.first-col, input.first-col.done {
-	/* background-color: #ff5252;
-	color: #fff; */
+	background-color: #ff5252;
+	/* color: #fff; */
 }
 
 td span {
@@ -92,7 +96,8 @@ td span {
 input.done {
 	font-weight: bold;
 	background: #f9a430;
-	color: #fff;
+	text-shadow: 0 0 0 #ffffff;
+	/* color: #fff; */
 }
 
 .active, .clues-active {
@@ -117,25 +122,25 @@ input.done {
 	/* float: left; */
 	display: block;
 	width: 85%;
-	padding: 10px;
+	padding: 30px 10px;
 	margin: 20px auto 0 auto;
-	/* border: 8px solid #f9a430; */
+	/* border: 2px solid #f9a430; */
 	box-shadow: 0px 0px 0px 5px #f9a430;
-	border-radius: 10px;
+	border-radius: 16px;
 	background: linear-gradient( to bottom, #739604, #3a5300);
 }
 
-#puzzle-clues ol{
+#puzzle-clues ol {
 	padding: 0;
 	margin: 0;
 }
 
-#puzzle-clues ol li{
+#puzzle-clues ol li {
 	display: none;
 	list-style: none;
 }
 
-#puzzle-clues ol li.clues-active{
+#puzzle-clues ol li.clues-active {
 	display: block;
 	background: transparent;
 	text-align: center;
@@ -144,12 +149,12 @@ input.done {
 	line-height: 1.2;
 }
 
-#puzzle-clues h1{
+#puzzle-clues h1 {
 	text-align: center;
 	color: #fff;
 }
 
-#puzzle-clues h2{
+#puzzle-clues h2 {
 	display: none;
 }
 
@@ -157,4 +162,23 @@ input.done {
 	font-size: 1.2em;
 	margin: .3em;
 	line-height: 1.6em;
+}
+
+.btn-done{
+	position: relative;
+	display: block;
+	margin: 20px auto 0 auto;
+	width: 85%;
+	color: #fff;
+	border-radius: 25px;
+	background: linear-gradient(to bottom, #f9b709, #e98f39);
+	border: none;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 6px 12px;
+	outline: none;
+	transition: .3s all;
+}
+.btn-done:active{
+	background: linear-gradient(to bottom, #e98f39, #e98f39);
 }
