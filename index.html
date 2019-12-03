@@ -1,0 +1,144 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Qurossword - A javascript crossword puzzle plugin</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+	<script src="js/jquery.crossword.js"></script>
+	<script src="js/module/sub7.bag2.js"></script>
+
+	<!-- <script src="https://cdn.statically.io/gh/el-mubarok/intraservecode/049d715/jquery.crossword.js"></script>
+	<script src="https://cdn.statically.io/gh/el-mubarok/intraservecode/049d715/puzzle-1.script.js"></script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- <link rel="stylesheet" href="https://cdn.statically.io/gh/el-mubarok/intraservecode/049d715/main.style.css"> -->
+
+</head>
+
+<body>
+	<!-- <div class="loadingg show">
+		<div class="indicator">
+			<svg width="16px" height="12px">
+				<polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+				<polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+			</svg>
+		</div>
+	</div> -->
+	<section class="overlay"></section>
+	<div class="fixed-bg">
+		<div>
+			<img src="./img/pexels-photo-1531677.jpeg">
+		</div>
+		<div>
+			<img src="./img/pexels-photo-3262573.jpeg">
+		</div>
+		<div>
+			<img src="./img/pexels-photo-3287165.jpeg">
+		</div>
+	</div>
+	<div id="puzzle-wrapper" data-materi="sub 2">
+		<!-- crossword puzzle appended here -->
+	</div>
+	<!-- <button class="btn-done">
+		<span style="vertical-align: middle;">Selesai</span>
+		<img src="./img/Group 235.png" style="float: right; vertical-align: middle;" alt="">
+	</button> -->
+
+	<!-- <div class="score-wrapper">
+		<div class="score">
+			<div class="score-art">
+				<div class="score-art-base">
+					<img src="./img/Group 240.png" class="score-art-base" alt="">
+					
+					<button class="btn-score close">Keluar</button>
+					<button class="btn-score next">Lanjut</button>
+				</div>
+
+				<div class="star-wrapper">
+					<h4>Your Score</h4>
+					<img src="./img/star.png" class="star" alt="">
+					<img src="./img/star.png" class="star" alt="">
+					<img src="./img/star.png" class="star" alt="">
+					<img src="./img/star.png" class="star" alt="">
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<img id="btnDone" src="./img/Group 236.png" style="width: 100%; position: relative; z-index: 10; margin-top: 20px;" alt="">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="./js/animatecss.js"></script>	
+	<script>
+		// responsive element when window resizing
+		$(window).resize(function () {
+			let w = $("table td").width();
+			$("table td").height(w);
+		});
+		// end
+
+		$(document).ready(function () {
+			// init element width
+			let w = $("table td").width();
+			let wPuzzle = $("#puzzle-wrapper").width();
+			$("table td").height(w);
+			$("#puzzle-clues").width(wPuzzle - 5);
+			// end
+
+			// show loading after document is ready
+			setTimeout(function () { $(".loadingg").removeClass("show"); }, 3000);
+			// end
+		});
+
+		// background sliding fade
+		$(".fixed-bg > div:gt(0)").hide();
+		setInterval(function () {
+			$('.fixed-bg > div:first')
+				.fadeOut(1000)
+				.next()
+				.fadeIn(1000)
+				.end()
+				.appendTo('.fixed-bg');
+		}, 3000);
+		// end
+
+		// $("#example").hide();
+		// $("#btnDone").click(function (e) { 
+		// 	e.preventDefault();
+		// 	animateCSS(".score-wrapper", "bounceIn", function(){
+		// 		$(".score-wrapper").css('transform','scale3d(1,1,1)');
+		// 		animateCSS(".score", "bounceIn", function(){
+		// 			$(".score").css('transform', 'scale3d(1,1,1)');
+		// 		});
+		// 	});
+		// });
+
+		// $(".score-wrapper").click(function (e) { 
+		// 	e.preventDefault();
+		// 	animateCSS(".score-wrapper", "bounceOut", function(){
+		// 		$(".score-wrapper").css('transform','scale3d(0,0,0)');
+		// 	});
+		// });
+	</script>
+
+</body>
+
+</html>
